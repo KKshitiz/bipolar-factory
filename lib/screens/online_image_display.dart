@@ -33,12 +33,16 @@ class _OnlineImageDisplayState extends State<OnlineImageDisplay> {
           } else {
             return Center(
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   CircularProgressIndicator(),
                   SizedBox(
                     height: 20,
                   ),
-                  Text('Fetching data'),
+                  Text(
+                    'Fetching data',
+                    style: TextStyle(color: Colors.black),
+                  ),
                 ],
               ),
             );

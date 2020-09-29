@@ -19,7 +19,7 @@ class ApiDataHandler {
     var jsonData = jsonDecode(response.body);
     if (response.statusCode == 200) {
       for (var photoData in jsonData) {
-        _photosUrl.add(photoData["urls"]["regular"]);
+        _photosUrl.add(photoData["urls"]["small"]);
       }
       print(_photosUrl);
     } else {
@@ -35,7 +35,7 @@ class ApiDataHandler {
         String id = collection['id'].toString();
         String location = collection['cover_photo']['user']['location'];
         String photosUrl = collection['links']['photos'];
-        String coverImageUrl = collection['cover_photo']['urls']['regular'];
+        String coverImageUrl = collection['cover_photo']['urls']['small'];
         print('$coverImageUrl');
         _collectionData.add(Collection(
             collectionId: id,
